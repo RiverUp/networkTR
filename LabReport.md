@@ -164,4 +164,51 @@ Your browser should display a short HTML file with two images. These two images 
 ##### Result  
 ![http result](https://github.com/RiverUp/networkTR/blob/main/Inkedwireshark_http9_LI.jpg) 
 16. Three  
-17. According to the order of the respones, I guess its serial. 
+17. According to the order of the respones, I guess its serial.  
+
+
+## <font color=Crimson>Wireshark_DNS</font>  
+![1.](https://github.com/RiverUp/networkTR/blob/main/DNS1.1.png)  
+![2.](https://github.com/RiverUp/networkTR/blob/main/DNS1.2.png)  
+![3.](https://github.com/RiverUp/networkTR/blob/main/DNS1.3.png)  
+1. I looked up Baidu, its IP address is 36.152.44.96 and 36.152.44.95  
+2. I looked up Oxford University
+3. I used dns0.ox.ac.uk to query yahoo but failed, so I retried facebook and succeeded.  
+   
+![4.](https://github.com/RiverUp/networkTR/blob/main/DNS1.4.png)  
+![5.](https://github.com/RiverUp/networkTR/blob/main/DNS1.5.png)  
+![6.](https://github.com/RiverUp/networkTR/blob/main/DNS1.6.png)  
+![7.](https://github.com/RiverUp/networkTR/blob/main/DNS1.7.png)  
+![8.](https://github.com/RiverUp/networkTR/blob/main/DNS1.8.png)  
+4. UDP  
+5. Both are 53  
+6. The DNS query message was sent to 202.114.96.1
+   Yes, they are the same.
+7. Type is A. And it didn't get any answer. 
+8. It provided 3 answers. They contained ServerName, Type, Class, Time to live, Date length and Cname.  
+9. No, they had no corresponce.  
+10. No.
+![11.](https://github.com/RiverUp/networkTR/blob/main/DNS1.11.png)  
+![12.](https://github.com/RiverUp/networkTR/blob/main/DNS1.12.png)        
+11. Both are 53.
+12. The DNS query message was sent to 202.114.96.1
+   Yes, they are the same.
+13. The type is AAAA. And it got no answer.
+14. Two. They contained ServerName, Type, Class, Time to live, Date length and Cname.  
+![13.](https://github.com/RiverUp/networkTR/blob/main/DNS1.13.png)    
+![14.](https://github.com/RiverUp/networkTR/blob/main/DNS1.14.png)  
+16. The DNS query message was sent to 202.114.96.1
+   Yes, they are the same.  
+17. The type is NS. And it had no answer.  
+18. ns7.dnsmadeeasy.com
+    ns6.dnsmadeeasy.com  
+    ns5.dnsmadeeasy.com  
+    atalante.stanford.edu  
+    avallone.stanford.edu
+    argus.stanford.edu  
+    No, it didn't provide.  
+![15.](https://github.com/RiverUp/networkTR/blob/main/DNS1.15.png)  
+![16.](https://github.com/RiverUp/networkTR/blob/main/DNS1.16.png)  
+20. It was sent to 171.64.7.115. They seemed to have no corresponce.  
+21. The type is A. It didn't contain any answer.  
+22. One. They contained ServerName, Type, Class, Time to live, Date length and Cname.

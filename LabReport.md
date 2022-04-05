@@ -191,9 +191,9 @@ Your browser should display a short HTML file with two images. These two images 
 ![11.](https://github.com/RiverUp/networkTR/blob/main/DNS1.11.png)  
 ![12.](https://github.com/RiverUp/networkTR/blob/main/DNS1.12.png)        
 11. Both are 53.
-12. The DNS query message was sent to 202.114.96.1
-   Yes, they are the same.
-13. The type is AAAA. And it got no answer.
+12. The DNS query message was sent to 202.114.96.1  
+   Yes, they are the same.  
+13. The type is AAAA. And it got no answer.  
 14. Two. They contained ServerName, Type, Class, Time to live, Date length and Cname.  
 ![13.](https://github.com/RiverUp/networkTR/blob/main/DNS1.13.png)    
 ![14.](https://github.com/RiverUp/networkTR/blob/main/DNS1.14.png)  
@@ -211,4 +211,15 @@ Your browser should display a short HTML file with two images. These two images 
 ![16.](https://github.com/RiverUp/networkTR/blob/main/DNS1.16.png)  
 20. It was sent to 171.64.7.115. They seemed to have no corresponce.  
 21. The type is A. It didn't contain any answer.  
-22. One. They contained ServerName, Type, Class, Time to live, Date length and Cname.
+22. One. They contained ServerName, Type, Class, Time to live, Date length and Cname.  
+
+## <font color=Crimson>Wireshark_UDP</font>    
+1. There are 4 fields and they are Source Port, Destination Port, Length and Checksum.   
+   ![udp1](https://github.com/RiverUp/networkTR/blob/main/udp1.png)  
+2. There are four header fields and each of them occupies 2 bytes. So, totally, its length is 8 bytes.  
+3. It is the length of header fields plus data fields.  
+   ![udp2](https://github.com/RiverUp/networkTR/blob/main/udp2.png)
+4. Length has 2 bytes so it can represent $ 2^{8*2} $ bytes data. And the header occupies 8. So, its maximum number is $ 2^{16}-8 $  
+5. The Port also has 2 bytes. And the port number begins with 0. So, the largest is $ 2^{16}-1 $  
+6. As the picture above shows, its 17. And Hexadecimally, it's 0X11  
+7. Their Source Port is corresponding with the other Destination Port.

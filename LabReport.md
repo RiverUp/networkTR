@@ -222,4 +222,32 @@ Your browser should display a short HTML file with two images. These two images 
 4. Length has 2 bytes so it can represent $ 2^{8*2} $ bytes data. And the header occupies 8. So, its maximum number is $ 2^{16}-8 $  
 5. The Port also has 2 bytes. And the port number begins with 0. So, the largest is $ 2^{16}-1 $  
 6. As the picture above shows, its 17. And Hexadecimally, it's 0X11  
-7. Their Source Port is corresponding with the other Destination Port.
+7. Their Source Port is corresponding with the other Destination Port.  
+## <font color=Crimson>Wireshark_TCP</font>  
+1. source IP:10.133.192.244 prort:52592
+2. gaia.cs.umass.edu IP: 128.199.245.12 port:80
+3. the same as the question 1
+   ![tcp1](https://github.com/RiverUp/networkTR/blob/main/tcp1.png)
+4. seq=0, using [SYN]
+5. seq=0, ACK=1, the seq of syn +1, using [SYN,ACK]
+   ![tcp2](https://github.com/RiverUp/networkTR/blob/main/tcp2.png)
+6. seq=43201
+7. |number|1|2|3|4|5|6|
+   |---|---|---|---|---|---|---|
+   |seq|1|1441|2881|4321|4761|7201|
+   |send time|3.715887|same|same|same|   4.032636|same|
+   |receive time|4.032541|same|same|same|4.350989|same|
+   |rtt|0.316654||||0.318353||
+   |EstimatedRTT(a=0.125)|0.316654||||0.316866|0.317052|
+   ![tcp3](https://github.com/RiverUp/networkTR/blob/main/tcp3.png)
+8. all of them are 1440.
+9. 32128
+ yes,the content surpass its size will be dropped.
+   ![tcp4](https://github.com/RiverUp/networkTR/blob/main/tcp4.png)  
+10. No. I check the time sequece graphs(strevens). Its sequece number never became smaller.  
+   ![tcp5](https://github.com/RiverUp/networkTR/blob/main/tcp5.png)  
+11. almost all of them are 1440.
+    if each sequence number has a related ack number, then all of the segments are acknowleged.  
+12. $avg(throughput)=149505\div(2.566962)=56.876kb/s$
+   ![tcp6](https://github.com/RiverUp/networkTR/blob/main/tcp6.png)  
+13. ![tcp7](https://github.com/RiverUp/networkTR/blob/main/tcp7.png)     

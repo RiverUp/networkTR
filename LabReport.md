@@ -250,4 +250,50 @@ Your browser should display a short HTML file with two images. These two images 
     if each sequence number has a related ack number, then all of the segments are acknowleged.  
 12. $avg(throughput)=149505\div(2.566962)=56.876kb/s$
    ![tcp6](https://github.com/RiverUp/networkTR/blob/main/tcp6.png)  
-13. ![tcp7](https://github.com/RiverUp/networkTR/blob/main/tcp7.png)     
+13. ![tcp7](https://github.com/RiverUp/networkTR/blob/main/tcp7.png)
+        
+## <font color=Crimson>Wireshark_IP</font> 
+  ![ip1](https://github.com/RiverUp/networkTR/blob/main/ip1.png)  
+2. ICMP  
+3. There are 20 bytes in the packet header. Because there are totally 56 bytes, the packet's payload is 36 bytes.  
+4. No, there are no packets that their ttl is the same.  
+   ![ip2](https://github.com/RiverUp/networkTR/blob/main/ip2.png) 
+5. ttl,header checksum and identification are always changing. 
+6.  must stay contant:
+   * **Version**: The versions used by the communication parties must be the same  
+   * **Header Length**: it is determined by ipv4 protocol.  
+  
+ stay constant:  
+  * **Datagram length**: This is the total length of the IP datagram (header plus data), measured in bytes. 
+  * **source address**
+  * **destination address**
+  * **Options**: The options fields allow an IP header to be extended. 
+  * **Identifier, flags, fragmentation offset**: These three fields have to do with so-called 
+IP fragmentation, when a large IP datagram is broken into several smaller IP datagrams which are then forwarded independently to the destination, where they are 
+reassembled before their payload data (see below) is passed up to the transport layer 
+at the destination host  
+
+must change:
+* **ttl**: every router the diagram passed will substract the value by 1.
+* **header checksum**: judge if it is valid.
+* **Identification**: it is used to uniquely identify all fragments of a message
+*  **data**  
+7. the identification of every diagram is different
+   It is used to uniquely identify all fragments of a packet. Therefore, you need to change this value for different packets to ensure that packets can be uniquely identified.  
+   ![ip3](https://github.com/RiverUp/networkTR/blob/main/ip3.png) 
+8. idnetification is 0x9947  
+   ttl is 64
+9. identification changes,but ttl doesn't.
+   identification is different because every reply is different.
+   while ttl doesn't change because every reply pass that router experiencing the same numbers of hop.  
+     ![ip4](https://github.com/RiverUp/networkTR/blob/main/ip4.png)  
+10. yes, it has been fragmented into two pieces.  
+    ![ip5](https://github.com/RiverUp/networkTR/blob/main/ip5.png) 
+11. it has 2 ipv4 fragments.
+    it's offset is 1480, so it's the second fragment.
+    it's 500 bytes.  
+12. the frag is 0,and its offset isn't 0, indicating it is the second fragment. and frag is 0 shows that there is no more fragment.
+13. their total length, frag and offset are different.  
+   ![ip6](https://github.com/RiverUp/networkTR/blob/main/ip6.png) 
+14. there are 3 fragments.
+15. total length, frag and offset are changing.

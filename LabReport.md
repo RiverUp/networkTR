@@ -296,4 +296,25 @@ must change:
 13. their total length, frag and offset are different.  
    ![ip6](https://github.com/RiverUp/networkTR/blob/main/ip6.png) 
 14. there are 3 fragments.
-15. total length, frag and offset are changing.
+15. total length, frag and offset are changing.  
+## <font color=Crimson>Wireshark_ICMP</font>  
+![pingICMP1](https://github.com/RiverUp/networkTR/blob/main/pingICMP.png)
+![pingICMP2](https://github.com/RiverUp/networkTR/blob/main/pingICMP2.png)
+1. My source IP address is 10.133.145.200, and the destination IP address is 151.101.78.133.  
+2. Because ICMP packets are carried as IP payloads, they do not need port numbers like TCP or UDP  
+3. Type is 8 and code is 0, which means this is a reply request message.  
+   Other fields include checksum, identifier and sequence number. They all need 4 bytes.  
+![pingICMP3](https://github.com/RiverUp/networkTR/blob/main/pingICMP3.png)
+4. Type is 0 and code is 0, which shows it is an echo response message.  
+   Other fields include checksum, identifier and sequence number. They all need 4 bytes.    
+![tracertICMP](https://github.com/RiverUp/networkTR/blob/main/tracertICMP.png)
+![tracertICMP1](https://github.com/RiverUp/networkTR/blob/main/tracertICMP1.png)  
+5. My source IP address is 10.133.145.200, and the destination IP address is 128.93.162.83.   
+6. According to the information I search on the Internet, the IP protocol number will be 17.  
+   ![tracertICMP2](https://github.com/RiverUp/networkTR/blob/main/tracertICMP2.png)  
+7. Yes, it's different. In this case, ICMP packets are TTL packets (type 11, code 0). This is in the Traceroute program. The router checks that the TTL in the IP packet sent by Traceroute just expired, so the router needs to discard the packet and send the warning message back to the source host. This is different from the purpose of the Ping program, which is to request a response.  
+8. ![tracertICMP3](https://github.com/RiverUp/networkTR/blob/main/tracertICMP3.png)  
+   Compared with the error message, the echo message doesn't have ICMP request packet.  
+   ![tracertICMP4](https://github.com/RiverUp/networkTR/blob/main/tracertICMP4.png)  
+9. This is the reply packet returned by the destination host. The principle of the Tracert program is to send packets with increased TTL. When the packet with TTL = 1 reaches the router, the router discards the packet and sends an ICMP error to the requesting machine. The last group of 3 datagrams can reach the destination host. At this time, because it is received by the destination host, the destination host does not lose the packet, but actually receives the datagrams of the detection and makes a response.  
+10. Between the eighth node and the ninth node, the delay of the subsequent nodes all reached 250+ ms.  After that, the name of the router is English, and the destination is France, which should be connected to the border router between Asia and Europe.

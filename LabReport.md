@@ -200,7 +200,8 @@ Your browser should display a short HTML file with two images. These two images 
 16. The DNS query message was sent to 202.114.96.1
    Yes, they are the same.  
 17. The type is NS. And it had no answer.  
-18. ns7.dnsmadeeasy.com
+18. 
+ ns7.dnsmadeeasy.com
     ns6.dnsmadeeasy.com  
     ns5.dnsmadeeasy.com  
     atalante.stanford.edu  
@@ -209,9 +210,9 @@ Your browser should display a short HTML file with two images. These two images 
     No, it didn't provide.  
 ![15.](https://github.com/RiverUp/networkTR/blob/main/DNS1.15.png)  
 ![16.](https://github.com/RiverUp/networkTR/blob/main/DNS1.16.png)  
-20. It was sent to 171.64.7.115. They seemed to have no corresponce.  
-21. The type is A. It didn't contain any answer.  
-22. One. They contained ServerName, Type, Class, Time to live, Date length and Cname.  
+1.  It was sent to 171.64.7.115. They seemed to have no corresponce.  
+2.  The type is A. It didn't contain any answer.  
+3.  One. They contained ServerName, Type, Class, Time to live, Date length and Cname.  
 
 ## <font color=Crimson>Wireshark_UDP</font>    
 1. There are 4 fields and they are Source Port, Destination Port, Length and Checksum.   
@@ -317,4 +318,30 @@ must change:
    Compared with the error message, the echo message doesn't have ICMP request packet.  
    ![tracertICMP4](https://github.com/RiverUp/networkTR/blob/main/tracertICMP4.png)  
 9. This is the reply packet returned by the destination host. The principle of the Tracert program is to send packets with increased TTL. When the packet with TTL = 1 reaches the router, the router discards the packet and sends an ICMP error to the requesting machine. The last group of 3 datagrams can reach the destination host. At this time, because it is received by the destination host, the destination host does not lose the packet, but actually receives the datagrams of the detection and makes a response.  
-10. Between the eighth node and the ninth node, the delay of the subsequent nodes all reached 250+ ms.  After that, the name of the router is English, and the destination is France, which should be connected to the border router between Asia and Europe.
+10. Between the eighth node and the ninth node, the delay of the subsequent nodes all reached 250+ ms.  After that, the name of the router is English, and the destination is France, which should be connected to the border router between Asia and Europe.  
+
+## <font color=Crimson>Wireshark_Ethernet and ARP</font>    
+
+![arp1](arp1.png)
+1. 48-bit Ethernet address of my computer is a8:7e:ea:59:44:cb  
+2. The 48-bit destination address in the Ethernet frame id 14:14:4b:44:fd.
+   It is not the Ethernet address of gaia.cs.umass.edu. Instead, it's the Ethernet address of the router my computer connected to.  
+3. the hexadecimal value for the two-byte Frame type field is 0x0800  
+   the upper layer protocol this correspond to is ipv4
+4. $ 3\times16+6=54 $  
+   ![arp2](arp2.png)
+5. the value of the Ethernet source address is 14:14:4b:44:fd. It is not the Ethernet address of gaia.cs.umass.edu. Instead, it's the Ethernet address of the router my computer connected to.   
+6. the destination address in the Ethernet frame is a8:7e:ea:59:44:cb. It's my computer's Ethernet address.
+7. the hexadecimal value for the two-byte Frame type field is 0x0800  
+   the upper layer protocol this correspond to is ipv4  
+8. $ 4\times16+3=67 $  
+9. ![arp3](arp3.png)
+   ![arp4](arp4.png)
+10. the value of the source address is a8:7e:ea:59:44:cb.
+    the destination address in the frame is 14:14:4b:44:fd.
+11. the hexadecimal value for the two-byte Frame type field is 0x0806  
+   the upper layer protocol this correspond to is arp  
+   ![arp5](arp5.png)
+12. a.$ 16+5=21$
+    b.the opcode is 2
+    c. the IP address of the machine having the Ethernet address whose corresponding IP address is being queried is *10.133.139.149*

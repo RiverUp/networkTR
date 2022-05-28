@@ -16,7 +16,7 @@ Two computers
 3. Open my computer's command line and input the ping instruction.
 4. check the result if the second comuper receive the data package.  
 ### 4.Result  
-![ping's result](https://github.com/RiverUp/networkTR/blob/main/Snipaste_2022-02-16_21-13-42.png "ping's result")  
+![ping's result](Snipaste_2022-02-16_21-13-42.png "ping's result")  
 The second computer successfully received the package.  
 ### 5.Conclusion  
 By using hotspor to connect two computers, their communication is successful.
@@ -37,7 +37,7 @@ Two computers
 3. Open my computer's command line and input the tracert instruction.
 4. check the result
 ### 4.Result
-![tracert's result](https://github.com/RiverUp/networkTR/blob/main/Snipaste_2022-02-16_21-14-59.png "travert's result")  
+![tracert's result](Snipaste_2022-02-16_21-14-59.png "travert's result")  
 The result shows the second computer's DNS server is my own computer.It's successful.  
 ### 5.Conclusion  
 By using hotspot to connect two computers, the computer sharing the hotspot is the DNS server of the other one.  
@@ -58,16 +58,16 @@ A computer connected with the Internet with a browser and WireShark
 3. After http://cs.whu.edu.cn/index.aspx pages can be rendered by the browser, stop capturing in the WireShark.
 4. Check the list of captured packets select the message we need.
 ### 4.Result
-![Introduction result](https://github.com/RiverUp/networkTR/blob/main/httpIntroduction2.png "WireShark Introduction's result")  
-![Introduction's result](https://github.com/RiverUp/networkTR/blob/main/httpIntroduction1.png "WireShark Introduction's result")   
-![Introduction's result](https://github.com/RiverUp/networkTR/blob/main/httpIntroduction3.png "WireShark Introduction's result")   
+![Introduction result](httpIntroduction2.png "WireShark Introduction's result")  
+![Introduction's result](httpIntroduction1.png "WireShark Introduction's result")   
+![Introduction's result](httpIntroduction3.png "WireShark Introduction's result")   
 ### 5.Conclusion  
 1. As shown in Figure One
 2. 0.551509s
 3. cs.whu.edu.cn's ip:202.114.64.41  
    My ip:10.133.183.40
-4. *[GET](https://github.com/RiverUp/networkTR/blob/main/wireshark_WLANG6DMI1.pdf )*   
-   *[OK](https://github.com/RiverUp/networkTR/blob/main/wireshark_WLANG6DMI2 )*   
+4. *[GET](wireshark_WLANG6DMI1.pdf )*   
+   *[OK](wireshark_WLANG6DMI2 )*   
 
 
 
@@ -86,8 +86,8 @@ A computer.
    `GET /index.htm HTTP/1.1`  
    `host:cs.hust.edu.cn`  
 ### 4.Result  
-![Introduction result](https://github.com/RiverUp/networkTR/blob/main/Snipaste_2022-03-05_23-03-57.png "telnet's result")  
-![Introduction result](https://github.com/RiverUp/networkTR/blob/main/Snipaste_2022-03-05_23-02-52.png "telnet's result")  
+![Introduction result](Snipaste_2022-03-05_23-03-57.png "telnet's result")  
+![Introduction result](Snipaste_2022-03-05_23-02-52.png "telnet's result")  
 ### 5.Conclusion  
 If we connect a server successfully via telnet instruction, we can sent GET request to the server and get the response.
 
@@ -108,9 +108,9 @@ We capture the http packages of different types and we find out the details of t
 5.	Your browser should display a very simple, one-line HTML file.
 6.	Stop Wireshark packet capture.
 ##### Result  
-![http result](https://github.com/RiverUp/networkTR/blob/main/Inkedwireshark_http_LI.jpg) 
-![http result](https://github.com/RiverUp/networkTR/blob/main/Inkedwireshark_http1_LI.jpg) 
-![http result](https://github.com/RiverUp/networkTR/blob/main/Inkedwireshark_http2_LI.jpg)  
+![http result](Inkedwireshark_http_LI.jpg) 
+![http result](Inkedwireshark_http1_LI.jpg) 
+![http result](Inkedwireshark_http2_LI.jpg)  
 1. Both are HTTP 1.1   
 2. zh-CN,zh  
 3. my computer: 10.133.157.108  
@@ -129,10 +129,10 @@ Your browser should display a very simple five-line HTML file.
 •	Quickly enter the same URL into your browser again (or simply select the refresh button on your browser)
 •	Stop Wireshark packet capture, and enter “http” in the display-filter-specification window, so that only captured HTTP messages will be displayed later in the packet-listing window.  
 ##### Result  
-![http result](https://github.com/RiverUp/networkTR/blob/main/wireshark_http3.png)  
-![http result](https://github.com/RiverUp/networkTR/blob/main/Inkedwireshark_http4_LI.jpg)  
-![http result](https://github.com/RiverUp/networkTR/blob/main/Inkedwireshark_http5_LI.jpg)  
-![http result](https://github.com/RiverUp/networkTR/blob/main/Inkedwireshark_http6_LI.jpg)  
+![http result](wireshark_http3.png)  
+![http result](Inkedwireshark_http4_LI.jpg)  
+![http result](Inkedwireshark_http5_LI.jpg)  
+![http result](Inkedwireshark_http6_LI.jpg)  
 8. No  
 9. Yes. There is content length.  
 10. Yes. The time the web page was last modified  
@@ -146,9 +146,9 @@ http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file3.html
 Your browser should display the rather lengthy US Bill of Rights.
 •	Stop Wireshark packet capture, and enter “http” in the display-filter-specification window, so that only captured HTTP messages will be displayed. 
 ##### Result  
-![http result](https://github.com/RiverUp/networkTR/blob/main/Inkedwireshark_http7_LI.jpg)  
-![http result](https://github.com/RiverUp/networkTR/blob/main/Inkedwireshark_http8_LI.jpg) 
-![http result](https://github.com/RiverUp/networkTR/blob/main/wireshark_http9.png)  
+![http result](Inkedwireshark_http7_LI.jpg)  
+![http result](Inkedwireshark_http8_LI.jpg) 
+![http result](wireshark_http9.png)  
 12.  One  
 13.  No.53  
 14.  200, OK  
@@ -162,24 +162,24 @@ http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file4.html
 Your browser should display a short HTML file with two images. These two images are referenced in the base HTML file.  That is, the images themselves are not contained in the HTML; instead the URLs for the images are contained in the downloaded HTML file. As discussed in the textbook, your browser will have to retrieve these logos from the indicated web sites.   The textbook publisher’s logo is retrieved from the gaia.cs.umass.edu web site.  The image of the cover for the 5th edition of the textbook is stored at the caite.cs.umass.edu server. (These are two different web servers inside cs.umass.edu).
 •	Stop Wireshark packet capture, and enter “http” in the display-filter-specification window, so that only captured HTTP messages will be displayed. 
 ##### Result  
-![http result](https://github.com/RiverUp/networkTR/blob/main/Inkedwireshark_http9_LI.jpg) 
+![http result](Inkedwireshark_http9_LI.jpg) 
 16. Three  
 17. According to the order of the respones, I guess its serial.  
 
 
 ## <font color=Crimson>Wireshark_DNS</font>  
-![1.](https://github.com/RiverUp/networkTR/blob/main/DNS1.1.png)  
-![2.](https://github.com/RiverUp/networkTR/blob/main/DNS1.2.png)  
-![3.](https://github.com/RiverUp/networkTR/blob/main/DNS1.3.png)  
+![1.](DNS1.1.png)  
+![2.](DNS1.2.png)  
+![3.](DNS1.3.png)  
 1. I looked up Baidu, its IP address is 36.152.44.96 and 36.152.44.95  
 2. I looked up Oxford University
 3. I used dns0.ox.ac.uk to query yahoo but failed, so I retried facebook and succeeded.  
    
-![4.](https://github.com/RiverUp/networkTR/blob/main/DNS1.4.png)  
-![5.](https://github.com/RiverUp/networkTR/blob/main/DNS1.5.png)  
-![6.](https://github.com/RiverUp/networkTR/blob/main/DNS1.6.png)  
-![7.](https://github.com/RiverUp/networkTR/blob/main/DNS1.7.png)  
-![8.](https://github.com/RiverUp/networkTR/blob/main/DNS1.8.png)  
+![4.](DNS1.4.png)  
+![5.](DNS1.5.png)  
+![6.](DNS1.6.png)  
+![7.](DNS1.7.png)  
+![8.](DNS1.8.png)  
 4. UDP  
 5. Both are 53  
 6. The DNS query message was sent to 202.114.96.1
@@ -188,15 +188,15 @@ Your browser should display a short HTML file with two images. These two images 
 8. It provided 3 answers. They contained ServerName, Type, Class, Time to live, Date length and Cname.  
 9. No, they had no corresponce.  
 10. No.
-![11.](https://github.com/RiverUp/networkTR/blob/main/DNS1.11.png)  
-![12.](https://github.com/RiverUp/networkTR/blob/main/DNS1.12.png)        
+![11.](DNS1.11.png)  
+![12.](DNS1.12.png)        
 11. Both are 53.
 12. The DNS query message was sent to 202.114.96.1  
    Yes, they are the same.  
 13. The type is AAAA. And it got no answer.  
 14. Two. They contained ServerName, Type, Class, Time to live, Date length and Cname.  
-![13.](https://github.com/RiverUp/networkTR/blob/main/DNS1.13.png)    
-![14.](https://github.com/RiverUp/networkTR/blob/main/DNS1.14.png)  
+![13.](DNS1.13.png)    
+![14.](DNS1.14.png)  
 16. The DNS query message was sent to 202.114.96.1
    Yes, they are the same.  
 17. The type is NS. And it had no answer.  
@@ -208,18 +208,18 @@ Your browser should display a short HTML file with two images. These two images 
     avallone.stanford.edu
     argus.stanford.edu  
     No, it didn't provide.  
-![15.](https://github.com/RiverUp/networkTR/blob/main/DNS1.15.png)  
-![16.](https://github.com/RiverUp/networkTR/blob/main/DNS1.16.png)  
+![15.](DNS1.15.png)  
+![16.](DNS1.16.png)  
 1.  It was sent to 171.64.7.115. They seemed to have no corresponce.  
 2.  The type is A. It didn't contain any answer.  
 3.  One. They contained ServerName, Type, Class, Time to live, Date length and Cname.  
 
 ## <font color=Crimson>Wireshark_UDP</font>    
 1. There are 4 fields and they are Source Port, Destination Port, Length and Checksum.   
-   ![udp1](https://github.com/RiverUp/networkTR/blob/main/udp1.png)  
+   ![udp1](udp1.png)  
 2. There are four header fields and each of them occupies 2 bytes. So, totally, its length is 8 bytes.  
 3. It is the length of header fields plus data fields.  
-   ![udp2](https://github.com/RiverUp/networkTR/blob/main/udp2.png)
+   ![udp2](udp2.png)
 4. Length has 2 bytes so it can represent $ 2^{8*2} $ bytes data. And the header occupies 8. So, its maximum number is $ 2^{16}-8 $  
 5. The Port also has 2 bytes. And the port number begins with 0. So, the largest is $ 2^{16}-1 $  
 6. As the picture above shows, its 17. And Hexadecimally, it's 0X11  
@@ -228,10 +228,10 @@ Your browser should display a short HTML file with two images. These two images 
 1. source IP:10.133.192.244 prort:52592
 2. gaia.cs.umass.edu IP: 128.199.245.12 port:80
 3. the same as the question 1
-   ![tcp1](https://github.com/RiverUp/networkTR/blob/main/tcp1.png)
+   ![tcp1](tcp1.png)
 4. seq=0, using [SYN]
 5. seq=0, ACK=1, the seq of syn +1, using [SYN,ACK]
-   ![tcp2](https://github.com/RiverUp/networkTR/blob/main/tcp2.png)
+   ![tcp2](tcp2.png)
 6. seq=43201
 7. |number|1|2|3|4|5|6|
    |---|---|---|---|---|---|---|
@@ -240,25 +240,25 @@ Your browser should display a short HTML file with two images. These two images 
    |receive time|4.032541|same|same|same|4.350989|same|
    |rtt|0.316654||||0.318353||
    |EstimatedRTT(a=0.125)|0.316654||||0.316866|0.317052|
-   ![tcp3](https://github.com/RiverUp/networkTR/blob/main/tcp3.png)
+   ![tcp3](tcp3.png)
 8. all of them are 1440.
 9. 32128
  yes,the content surpass its size will be dropped.
-   ![tcp4](https://github.com/RiverUp/networkTR/blob/main/tcp4.png)  
+   ![tcp4](tcp4.png)  
 10. No. I check the time sequece graphs(strevens). Its sequece number never became smaller.  
-   ![tcp5](https://github.com/RiverUp/networkTR/blob/main/tcp5.png)  
+   ![tcp5](tcp5.png)  
 11. almost all of them are 1440.
     if each sequence number has a related ack number, then all of the segments are acknowleged.  
 12. $avg(throughput)=149505\div(2.566962)=56.876kb/s$
-   ![tcp6](https://github.com/RiverUp/networkTR/blob/main/tcp6.png)  
-13. ![tcp7](https://github.com/RiverUp/networkTR/blob/main/tcp7.png)
+   ![tcp6](tcp6.png)  
+13. ![tcp7](tcp7.png)
         
 ## <font color=Crimson>Wireshark_IP</font> 
-  ![ip1](https://github.com/RiverUp/networkTR/blob/main/ip1.png)  
+  ![ip1](ip1.png)  
 2. ICMP  
 3. There are 20 bytes in the packet header. Because there are totally 56 bytes, the packet's payload is 36 bytes.  
 4. No, there are no packets that their ttl is the same.  
-   ![ip2](https://github.com/RiverUp/networkTR/blob/main/ip2.png) 
+   ![ip2](ip2.png) 
 5. ttl,header checksum and identification are always changing. 
 6.  must stay contant:
    * **Version**: The versions used by the communication parties must be the same  
@@ -281,42 +281,42 @@ must change:
 *  **data**  
 7. the identification of every diagram is different
    It is used to uniquely identify all fragments of a packet. Therefore, you need to change this value for different packets to ensure that packets can be uniquely identified.  
-   ![ip3](https://github.com/RiverUp/networkTR/blob/main/ip3.png) 
+   ![ip3](ip3.png) 
 8. idnetification is 0x9947  
    ttl is 64
 9. identification changes,but ttl doesn't.
    identification is different because every reply is different.
    while ttl doesn't change because every reply pass that router experiencing the same numbers of hop.  
-     ![ip4](https://github.com/RiverUp/networkTR/blob/main/ip4.png)  
+     ![ip4](ip4.png)  
 10. yes, it has been fragmented into two pieces.  
-    ![ip5](https://github.com/RiverUp/networkTR/blob/main/ip5.png) 
+    ![ip5](ip5.png) 
 11. it has 2 ipv4 fragments.
     it's offset is 1480, so it's the second fragment.
     it's 500 bytes.  
 12. the frag is 0,and its offset isn't 0, indicating it is the second fragment. and frag is 0 shows that there is no more fragment.
 13. their total length, frag and offset are different.  
-   ![ip6](https://github.com/RiverUp/networkTR/blob/main/ip6.png) 
+   ![ip6](ip6.png) 
 14. there are 3 fragments.
 15. total length, frag and offset are changing.  
 ## <font color=Crimson>Wireshark_ICMP</font>  
-![pingICMP1](https://github.com/RiverUp/networkTR/blob/main/pingICMP.png)
-![pingICMP2](https://github.com/RiverUp/networkTR/blob/main/pingICMP2.png)
+![pingICMP1](pingICMP.png)
+![pingICMP2](pingICMP2.png)
 1. My source IP address is 10.133.145.200, and the destination IP address is 151.101.78.133.  
 2. Because ICMP packets are carried as IP payloads, they do not need port numbers like TCP or UDP  
 3. Type is 8 and code is 0, which means this is a reply request message.  
    Other fields include checksum, identifier and sequence number. They all need 4 bytes.  
-![pingICMP3](https://github.com/RiverUp/networkTR/blob/main/pingICMP3.png)
+![pingICMP3](pingICMP3.png)
 4. Type is 0 and code is 0, which shows it is an echo response message.  
    Other fields include checksum, identifier and sequence number. They all need 4 bytes.    
-![tracertICMP](https://github.com/RiverUp/networkTR/blob/main/tracertICMP.png)
-![tracertICMP1](https://github.com/RiverUp/networkTR/blob/main/tracertICMP1.png)  
+![tracertICMP](tracertICMP.png)
+![tracertICMP1](tracertICMP1.png)  
 5. My source IP address is 10.133.145.200, and the destination IP address is 128.93.162.83.   
 6. According to the information I search on the Internet, the IP protocol number will be 17.  
-   ![tracertICMP2](https://github.com/RiverUp/networkTR/blob/main/tracertICMP2.png)  
+   ![tracertICMP2](tracertICMP2.png)  
 7. Yes, it's different. In this case, ICMP packets are TTL packets (type 11, code 0). This is in the Traceroute program. The router checks that the TTL in the IP packet sent by Traceroute just expired, so the router needs to discard the packet and send the warning message back to the source host. This is different from the purpose of the Ping program, which is to request a response.  
-8. ![tracertICMP3](https://github.com/RiverUp/networkTR/blob/main/tracertICMP3.png)  
+8. ![tracertICMP3](tracertICMP3.png)  
    Compared with the error message, the echo message doesn't have ICMP request packet.  
-   ![tracertICMP4](https://github.com/RiverUp/networkTR/blob/main/tracertICMP4.png)  
+   ![tracertICMP4](tracertICMP4.png)  
 9. This is the reply packet returned by the destination host. The principle of the Tracert program is to send packets with increased TTL. When the packet with TTL = 1 reaches the router, the router discards the packet and sends an ICMP error to the requesting machine. The last group of 3 datagrams can reach the destination host. At this time, because it is received by the destination host, the destination host does not lose the packet, but actually receives the datagrams of the detection and makes a response.  
 10. Between the eighth node and the ninth node, the delay of the subsequent nodes all reached 250+ ms.  After that, the name of the router is English, and the destination is France, which should be connected to the border router between Asia and Europe.  
 

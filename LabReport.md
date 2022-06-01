@@ -101,11 +101,11 @@ We capture the http packages of different types and we find out the details of t
 ### Method    
 #### 1. The Basic HTTP GET/response interaction  
 ##### Procedure  
-1.	Start up your web browser.
+1.	Start up the web browser.
 2.	Start up the Wireshark packet sniffer, but don’t yet begin packet capture.  Enter “http” (just the letters, not the quotation marks) in the display-filter-specification window and press enter, so that only captured HTTP messages will be displayed later in the packet-listing window.  (We’re only interested in the HTTP protocol here, and declutter all other uninteresting captured packets). 
 3.	Wait a bit more than one minute (we’ll see why shortly), and then begin Wireshark packet capture.
-4.	Surf website http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file1.html in your browser
-5.	Your browser should display a very simple, one-line HTML file.
+4.	Surf website http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file1.html in the browser
+5.	the browser should display a very simple, one-line HTML file.
 6.	Stop Wireshark packet capture.
 ##### Result  
 ![http result](Inkedwireshark_http_LI.jpg) 
@@ -121,12 +121,12 @@ We capture the http packages of different types and we find out the details of t
 7. No.  
 #### 2. The HTTP CONDITIONAL GET/response interaction  
 ##### Procedure  
-•	Start up your web browser, and make sure your browser’s cache is cleared, as discussed above.
+•	Start up the web browser, and make sure the browser’s cache is cleared, as discussed above.
 •	Start up the Wireshark packet sniffer
-•	Enter the following URL into your browser
+•	Enter the following URL into the browser
 http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file2.html
-Your browser should display a very simple five-line HTML file. 
-•	Quickly enter the same URL into your browser again (or simply select the refresh button on your browser)
+the browser should display a very simple five-line HTML file. 
+•	Quickly enter the same URL into the browser again (or simply select the refresh button on the browser)
 •	Stop Wireshark packet capture, and enter “http” in the display-filter-specification window, so that only captured HTTP messages will be displayed later in the packet-listing window.  
 ##### Result  
 ![http result](wireshark_http3.png)  
@@ -139,11 +139,11 @@ Your browser should display a very simple five-line HTML file.
 11. 304, Not Modified. No.  
 #### 3. Retrieving Long Documents  
 ##### Procedure  
-•	Start up your web browser, and make sure your browser’s cache is cleared, as discussed above.
+•	Start up the web browser, and make sure the browser’s cache is cleared, as discussed above.
 •	Start up the Wireshark packet sniffer
-•	Enter the following URL into your browser
+•	Enter the following URL into the browser
 http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file3.html
-Your browser should display the rather lengthy US Bill of Rights.
+the browser should display the rather lengthy US Bill of Rights.
 •	Stop Wireshark packet capture, and enter “http” in the display-filter-specification window, so that only captured HTTP messages will be displayed. 
 ##### Result  
 ![http result](Inkedwireshark_http7_LI.jpg)  
@@ -155,11 +155,11 @@ Your browser should display the rather lengthy US Bill of Rights.
 15.  Five
 #### 4. HTML Documents with Embedded Objects
 ##### Procedure  
-•	Start up your web browser, and make sure your browser’s cache is cleared, as discussed above.
+•	Start up the web browser, and make sure the browser’s cache is cleared, as discussed above.
 •	Start up the Wireshark packet sniffer
-•	Enter the following URL into your browser
+•	Enter the following URL into the browser
 http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-file4.html
-Your browser should display a short HTML file with two images. These two images are referenced in the base HTML file.  That is, the images themselves are not contained in the HTML; instead the URLs for the images are contained in the downloaded HTML file. As discussed in the textbook, your browser will have to retrieve these logos from the indicated web sites.   The textbook publisher’s logo is retrieved from the gaia.cs.umass.edu web site.  The image of the cover for the 5th edition of the textbook is stored at the caite.cs.umass.edu server. (These are two different web servers inside cs.umass.edu).
+the browser should display a short HTML file with two images. These two images are referenced in the base HTML file.  That is, the images themselves are not contained in the HTML; instead the URLs for the images are contained in the downloaded HTML file. As discussed in the textbook, the browser will have to retrieve these logos from the indicated web sites.   The textbook publisher’s logo is retrieved from the gaia.cs.umass.edu web site.  The image of the cover for the 5th edition of the textbook is stored at the caite.cs.umass.edu server. (These are two different web servers inside cs.umass.edu).
 •	Stop Wireshark packet capture, and enter “http” in the display-filter-specification window, so that only captured HTTP messages will be displayed. 
 ##### Result  
 ![http result](Inkedwireshark_http9_LI.jpg) 
@@ -168,6 +168,20 @@ Your browser should display a short HTML file with two images. These two images 
 
 
 ## <font color=Crimson>Wireshark_DNS</font>  
+### Abstract 
+take a closer look at the client side of DNS. Recall that the client’s role in the DNS is relatively simple – a client sends a query to its local DNS server, and receives a response back.
+### Procedures
+1. Run nslookup to obtain the IP address of Baidu.
+2. Run nslookup to obtain the IP address of Oxford.  
+3. Run nslookup to obtain the IP address of facebook
+4. Use ipconfig to empty the DNS cache in the host.
+5. Open the browser and empty the browser cache.
+6. Open Wireshark and enter “ip.addr == the_IP_address” into the filter, where you obtain the_IP_address with ipconfig. This filter removes all packets that neither originate nor are destined to the host. 
+7. Start packet capture in Wireshark.
+8. With the browser, visit the Web page: http://www.ietf.org 
+9. Stop packet capture. 
+### Results
+
 ![1.](DNS1.1.png)  
 ![2.](DNS1.2.png)  
 ![3.](DNS1.3.png)  
@@ -215,6 +229,13 @@ Your browser should display a short HTML file with two images. These two images 
 3.  One. They contained ServerName, Type, Class, Time to live, Date length and Cname.  
 
 ## <font color=Crimson>Wireshark_UDP</font>    
+### Abstract  
+take a look at the UDP transport protocol
+### Procedures
+1. Start capturing packets in Wireshark
+2. Stop packet capture, set the packet filter so that Wireshark only displays the UDP packets sent and received at the host.
+3. pick one of these UDP packets and expand the UDP fields in the details window. 
+### Results
 1. There are 4 fields and they are Source Port, Destination Port, Length and Checksum.   
    ![udp1](udp1.png)  
 2. There are four header fields and each of them occupies 2 bytes. So, totally, its length is 8 bytes.  
@@ -225,6 +246,16 @@ Your browser should display a short HTML file with two images. These two images 
 6. As the picture above shows, its 17. And Hexadecimally, it's 0X11  
 7. Their Source Port is corresponding with the other Destination Port.  
 ## <font color=Crimson>Wireshark_TCP</font>  
+### Abstract  
+investigate the behavior of the celebrated TCP protocol in detail by nalyzing a trace of the TCP segments sent and received in transferring a 150KB file
+### Procedures
+1. Download the attached txt file alice.txt in the lab repository from the website www.github.com/network-distributed, which is an ASCII copy of Alice in Wonderland. Store this file somewhere on the computer.
+2. Next go to  http://gaia.cs.umass.edu/wireshark-labs/TCP-wireshark-file1.html.
+3. Use the Browse button in this form to enter the name of the file on the computer containing Alice in Wonderland 
+4. Now start up Wireshark and begin packet capture and then press OK on the Wireshark Packet Capture Options screen 
+5. Returning to the browser, press the “Upload alice.txt file” button to upload the file to the gaia.cs.umass.edu server. 
+6. Stop Wireshark packet capture. 
+### Results
 1. source IP:10.133.192.244 prort:52592
 2. gaia.cs.umass.edu IP: 128.199.245.12 port:80
 3. the same as the question 1
@@ -254,7 +285,19 @@ Your browser should display a short HTML file with two images. These two images 
 13. ![tcp7](tcp7.png)
         
 ## <font color=Crimson>Wireshark_IP</font> 
+
+### Abstract  
+investigate the IP protocol, focusing on the IP datagram.investigate the IP protocol, focusing on the IP datagram. We’ll do so by analyzing a trace of IP datagrams sent and received by an execution of the traceroute program.nvestigate the various fields in the IP datagram, and study IP fragmentation in detail. 
+### Procedures  
+1. Download and install pingplotter, and test it out by performing a few traceroutes.
+2. Start up Wireshark and begin packet capture (Capture->Start) and then press OK on the Wireshark Packet Capture Options screen
+3. start up pingplotter and enter the name of a target destination in the “Address to Trace Window.”  Select the menu item Edit-> Options->Default Settings -> Engine and enter a value of 56 in the Packet Size field and then press OK.  Then press the Trace button.
+4. send a set of datagrams with a longer length, by selecting Edit-> Options->Default Settings -> Engine and enter a value of 2000 in the Packet Size field and then press OK. Then press the Resume button.
+5. send a set of datagrams with a longer length, by selecting Edit-> Options->Default Settings -> Engine and enter a value of 3500 in the Packet Size field and then press OK.  Then press the Resume button.
+6. Stop Wireshark tracing.
+### Results
   ![ip1](ip1.png)  
+1. my address is 10.133.192.244
 2. ICMP  
 3. There are 20 bytes in the packet header. Because there are totally 56 bytes, the packet's payload is 36 bytes.  
 4. No, there are no packets that their ttl is the same.  
@@ -287,7 +330,7 @@ must change:
 9. identification changes,but ttl doesn't.
    identification is different because every reply is different.
    while ttl doesn't change because every reply pass that router experiencing the same numbers of hop.  
-     ![ip4](ip4.png)  
+     ![ip4](ip4..png)  
 10. yes, it has been fragmented into two pieces.  
     ![ip5](ip5.png) 
 11. it has 2 ipv4 fragments.
@@ -299,6 +342,14 @@ must change:
 14. there are 3 fragments.
 15. total length, frag and offset are changing.  
 ## <font color=Crimson>Wireshark_ICMP</font>  
+### Abstract  
+capture the packets generated by the Ping program. 
+### Procedures  
+1. open the Windows Command Prompt
+2. Start up the Wireshark packet sniffer, and begin Wireshark packet capture.
+3. Type “ping –n 10 www.stanford.edu” in the command prompt terminal
+4. When the Ping program terminates, stop the packet capture in Wireshark.  
+### Results
 ![pingICMP1](pingICMP.png)
 ![pingICMP2](pingICMP2.png)
 1. My source IP address is 10.133.145.200, and the destination IP address is 151.101.78.133.  
@@ -321,7 +372,23 @@ must change:
 10. Between the eighth node and the ninth node, the delay of the subsequent nodes all reached 250+ ms.  After that, the name of the router is English, and the destination is France, which should be connected to the border router between Asia and Europe.  
 
 ## <font color=Crimson>Wireshark_Ethernet and ARP</font>    
+### Abstract  
+investigate the Ethernet protocol and the ARP protocol.  
+### Procedures
+1. Start up the Wireshark packet sniffer
+2. Enter the following URL into the browser http://gaia.cs.umass.edu/wireshark-labs/HTTP-ethereal-lab-file3.html  
+3. Stop Wireshark packet capture. First, find the packet numbers of the HTTP GET message that was sent from the computer to gaia.cs.umass.edu, as well as the beginning of the HTTP response message sent to the computer by gaia.cs.umass.edu.
+4. change Wireshark’s “listing of captured packets” window so that it shows information only about protocols below IP by selecting Analyze->Enabled Protocols.  Then uncheck the IPv4 box and select OK.
+5. Select the Ethernet frame containing the HTTP GET message. 
+6. type arp -a in the Windows powershell
+7. clear the ARP cache,  ny arp –d * command 
+8. Start up the Wireshark packet sniffer
+9. Enter the following URL into the browser http://gaia.cs.umass.edu/wireshark-labs/HTTP-wireshark-lab-file3.html  
+10. Stop Wireshark packet capture uncheck the IPv4 box and select OK. 
 
+
+
+### Results
 ![arp1](arp1.png)
 1. 48-bit Ethernet address of my computer is a8:7e:ea:59:44:cb  
 2. The 48-bit destination address in the Ethernet frame id 14:14:4b:44:fd.
@@ -344,4 +411,9 @@ must change:
    ![arp5](arp5.png)
 12. a.$ 16+5=21$
     b.the opcode is 2
-    c. the IP address of the machine having the Ethernet address whose corresponding IP address is being queried is *10.133.139.149*
+    c. the IP address of the machine having the Ethernet address whose corresponding IP address is being queried is *10.133.139.149*  
+
+
+## Postscript  
+
+Some Experiments data cannot be bore by the report. They are updated onto my github https://github.com/RiverUp/networkTR.
